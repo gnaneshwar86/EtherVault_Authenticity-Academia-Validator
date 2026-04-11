@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #0F172A;
+  --color-brand-secondary: #334155;
+  --color-brand-accent: #2563EB;
+  
+  --color-bg-light: #FFFFFF;
+  --color-bg-soft: #F8FAFC;
+  --color-bg-card: #FFFFFF;
+  
+  --color-text-main: #0F172A;
+  --color-text-muted: #64748B;
+  --color-text-dim: #94A3B8;
+
+  --font-sans: 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-text-main min-h-screen font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at top right, rgba(37, 99, 235, 0.03), transparent 40%),
+      radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.03), transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .sleek-panel {
+    @apply bg-white border border-slate-200/60 rounded-2xl shadow-sm transition-all duration-300;
+  }
+
+  .sleek-card {
+    @apply bg-white border border-slate-200/60 rounded-xl shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary text-white font-medium py-2.5 px-6 rounded-lg transition-all duration-200 hover:bg-slate-800 active:scale-[0.98] shadow-sm flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-brand-primary border border-slate-200 font-medium py-2.5 px-6 rounded-lg transition-all duration-200 hover:bg-slate-50 active:scale-[0.98] flex items-center justify-center gap-2;
+  }
+
+  .btn-accent {
+    @apply bg-brand-accent text-white font-medium py-2.5 px-6 rounded-lg transition-all duration-200 hover:bg-blue-700 active:scale-[0.98] shadow-sm flex items-center justify-center gap-2;
+  }
+
+  .input-field {
+    @apply bg-white border border-slate-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all text-slate-900 placeholder-slate-400;
+  }
+
+  .badge {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-tight border;
+  }
+
+  .badge-primary {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-tight border border-slate-200 bg-slate-50 text-slate-700;
+  }
+
+  .badge-accent {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-tight border border-blue-100 bg-blue-50 text-blue-600;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent;
+}
+
+.section-border {
+  @apply border-b border-slate-100;
+}
