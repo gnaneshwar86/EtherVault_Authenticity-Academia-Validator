@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+python-doctr[torch]
+torch
+torchvision
+tf-keras
