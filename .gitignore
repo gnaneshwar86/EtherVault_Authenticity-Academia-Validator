@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+.env
+
+# Build outputs
+dist/
+build/
+out/
+target/
+artifacts/
+cache/
+__pycache__/
+*.so
+*.pyc
+*.pyo
+
+# Logs
+*.log
+backend_log_final_*.txt
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Local env files
+.env.local
+.env.*.local
