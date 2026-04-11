@@ -1,0 +1,23 @@
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+backend_log_final_*.txt
+
+# IDE
+.settings/
+.project
+.classpath
+.factorypath
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# OS
+.DS_Store
